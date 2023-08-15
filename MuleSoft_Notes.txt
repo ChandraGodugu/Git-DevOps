@@ -1,0 +1,133 @@
+
+==========================================MuleSoft==========================================================
+training.mulesoft.com -----Mulesoft official website.
+username:csgodugu@gmail.com
+Mohak@210809
+
+
+======My SQL==============
+host:Chandra
+user:root
+pwd:Mohak@2108
+
+https://jsonlint.com/  to validate JASON code
+Pre-Requisites of MuleSoft Training:
+1. Basic understanding of Data formats such as XML,CSV and JSON.
+2. BAsics of Intergration technoloies of HTTP,JMS,Database,REST and SOAP
+
+Phases are 3:
+1.Design ------>Any point platform---8 to 10 Days
+----->RAML(Restful API Modelling Language)--->YAML and JSON>>Editing 2 Ways>> 1. Graphical or 2. XML View
+2.Development----Any point studio-----24 Days
+3.Deployment-----Cloud Hub or On Premise-1 Day
+34 Classes
+1 Class for Resume preparation
+1 class for Project
+Total 37 Classes.
+
+** Based on Datasheet or spread sheet or excel sheet(Data Mapping to create API)
+Interview Questions:
+====================
+1.RAML 1.0 Vs RAML 0.8
+2.Http Vs Https
+3.Diffrence between GET and POST, PUT and PATCH.
+
+Traits:Reusability of Assets:Headers,QueryParameters and Responses (Error Messages).
+=======
+
+
+PHASE1:AnyPoint Platform:-
+=========================
+4 parts of Design Center:1. File Browser 2. Editor 3. API Console 4. Shelf
+
+5 thinngs are need to remember to build an API
+=============================================
+
+1. /Resourcepath---/Provide any API Name
+2. Methods----GET,POST,PUT,DELETE,PATCH
+3. Request
+4. Response
+5. HTTP Status Codes
+
+
+
+
+/fetch-emp:
+  get:
+      queryParameters:
+        empid:
+          type: integer
+          required: true
+      responses:
+            200:
+              body:
+                 application/json:
+                    example:
+                      {
+                        "Message": "Successfully fetched"
+
+                      }    
+
+	   400:
+	     body:
+               application/json:
+		   example:
+		   {
+		     "Message": "Bad Request"	
+		   }			
+
+/create-emp:
+   POST:
+      body:
+       applciation/json:
+         example:
+           {
+	     "ID":1111,
+             "Name":"Chandra"
+             "Mobile No":993224098
+             "Country":"INDIA"
+	   }
+     Response:
+      200:
+       body:
+        application/json:
+          example:
+           {
+             "Message":"Emp ID Created Successfully"
+           }
+     400:
+      body:
+       application/json:
+        example:
+         {
+           "Message": "Bad Request"
+         }
+     500:
+      body:
+       application/jason:
+        example:
+         {
+           "Message": "Internal Server Error"
+         }
+    404:
+      body:
+       application/json:
+        example:
+         {
+           "Message": "Not Found"
+         } 	
+=====================
+Listener.......listen the requests from user or client
+Logger.......to print the message in console
+
+
+Types of Flows:
+===============
+Main Flow:>Contains Source,Process and Error Handling.
+Subflow: Contains only have process
+Private Flow:Contains empty source 
+
+---Source>>we will keep triggers>>>Listeners,
+
+==Debugging>>process of identyfing the error.
+==Breakpoint>>Stops the exexution
